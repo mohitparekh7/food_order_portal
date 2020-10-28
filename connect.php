@@ -4,8 +4,6 @@
 </head>
 <body>
 	<?php 
-		$username = "root";
-		$password = "";
 		$errors = array();
 
 		$db = mysqli_connect('localhost','root','','food_order');
