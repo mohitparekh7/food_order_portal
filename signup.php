@@ -32,10 +32,7 @@
 		}
 
 
-
-
-
-</style>
+	</style>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg">
