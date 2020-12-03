@@ -74,6 +74,44 @@
 			background-color: lightgrey;
 		}
 	</style>
+
+	<script type="text/javascript">
+		function validate(){
+			var name = document.form1.user_name.value;
+			var address = document.form1.user_address.value;
+			var mob = document.form1.user_mobilenumber.value;
+			var p1 = document.form1.password1.value;
+			var p2 = document.form1.password2.value;
+			var email = document.form1.user_emailid.value;
+
+			if (email==null || email==""){
+				alert("Email can't be blank");
+				return false;
+			}
+			if (name==null || name==""){
+				alert("Name can't be blank");
+				return false;
+			}
+			if (address==null || address==""){
+				alert("address can't be blank");
+				return false;
+			}
+			if (mob==null || mob==""){
+				alert("Mobile can't be blank");
+				return false;
+			}
+			if (p1==null || p1==""){
+				alert("Password can't be blank");
+				return false;
+			}
+			if (p2==null || p2==""){
+				alert("Confirm Password can't be blank");
+				return false;
+			}
+
+
+		}
+	</script>
 </head>
 <body>
 	<div class="container-fluid bar">
@@ -82,7 +120,7 @@
 
 	<div class="form1">
 	<div class="header">
-		<h1>Registeration</h1>		
+		<h1>Registration</h1>		
 	</div>
 
 	<table>
@@ -93,7 +131,7 @@
 					<label>Full Name</label>
 				</td>
 				<td>
-					<input type="varchar" name="user_name" value="">
+					<input type="text" name="user_name" required>
 				</td>
 			</tr>
 
@@ -102,26 +140,26 @@
 					<label>Address</label>
 				</td>
 				<td>
-					<input type="varchar" name="user_address" value="">
+					<input type="varchar" name="user_address" required>
 				</td>
 			</tr>
 			<tr>
 				<td><label>Email Id</label></td>
-				<td><input type="varchar" name="user_emailid" value=""></td>
+				<td><input type="email" name="user_emailid" required></td>
 			</tr>
 			<tr>
 				<td><label>Mobile Number</label></td>
-				<td><input type="int" name="user_mobilenumber" value=""></td>
+				<td><input type="int" name="user_mobilenumber" required></td>
 			</tr>
 
 			<tr>
 				<td><label>Password</label></td>
-				<td><input type="password"  name="password1" value=""></td>
+				<td><input type="password"  name="password1" required></td>
 			</tr>
 
 			<tr>
 				<td><label>Confirm Password</label></td>
-				<td><input type="password" name="password2" value=""></td>
+				<td><input type="password" name="password2" required></td>
 			</tr>
 
 		</table>
@@ -145,9 +183,7 @@
 
 	        <!-- Content -->
 	        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Bay View Cafe</h5>
-	        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-	          consectetur
-	          adipisicing elit.</p>
+	        <p>Hotel Harbour View rooftop, PJ Ramchandani Marg, Apollo Bandar, Colaba, Mumbai, Maharashtra 400001</p>
 
 	      </div>
 	      <!-- Grid column -->

@@ -45,19 +45,15 @@
       
     }
 
-    .jumbtext{
-      color: #404040;
-      /*width: 30%;*/
-      position: relative;
-      top: 60%;
-      left: 38%;
+
+    .dropdown-menu a:active{
+      background-color: #404040;
     }
 
-    .jumbtext h2{
-      font-family: 'Merriweather', serif;
-      letter-spacing: 1px;
-      font-weight: 900;
-      font-size: 40px;
+    .nav-item .fa{
+      font-size: 35px;
+      margin-top: 2px;
+      color: #ff5c33;
     }
 
     .navbar-center { 
@@ -185,17 +181,17 @@
           <a class="nav-link" href="contactus.php">Contact Us</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"a-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             My Account
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="profile.php">Profile</a>
-            <a class="dropdown-item" href="orders.php">My Orders</a>
+            <a class="dropdown-item" href="#">My Orders</a>
             <a class="dropdown-item" href="logout.php">LogOut</a>
           </div>
         </li>
         <li class="nav-item px-2">
-          <a href="cart.php"><span style=" color:green; font-size:30px;"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></a>
+          <a href="cart.php"><span style=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></a>
         </li>
 
 
@@ -335,45 +331,8 @@ if (isset($_GET['page'])){
 
 
 
-
-
-
-
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel">Cart</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <section class="container content-section">
-            <div class="cart-row">
-            </div>
-            <div class="cart-items">
-            </div>
-            <center><div class="cart-total" >
-                <strong class="cart-total-title" >Total</strong>
-                <span class="cart-total-price">Rs 0</span>
-            </div></center>
-            <center><button class="btn btn1 btn-purchase" type="button">PURCHASE</button></center>
-        </section>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn1" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
 </div>
-
-
 </div>
-
-
 
 
 <footer class="page-footer font-small stylish-color-dark pt-4 foot" id="footer">
@@ -389,9 +348,7 @@ if (isset($_GET['page'])){
 
         <!-- Content -->
         <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Bay View Cafe</h5>
-        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-          consectetur
-          adipisicing elit.</p>
+        <p>Hotel Harbour View rooftop, PJ Ramchandani Marg, Apollo Bandar, Colaba, Mumbai, Maharashtra 400001</p>
 
       </div>
       <!-- Grid column -->
@@ -464,8 +421,8 @@ if (isset($_GET['page'])){
   <!-- Copyright -->
 
 </footer>
-<!-- Footer -->
 
+<!-- Footer -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

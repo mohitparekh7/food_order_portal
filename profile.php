@@ -21,14 +21,21 @@
 	<style type="text/css">
 
 		body{
-			background-image: url(./images/bg11.jpg);
+			overflow-x: hidden;
+			background-image: url(./images/food.jpeg);
+			background-position: center;
 		}
 
 		.logo img{
 			height:55px;
 		}
 
-				.nav-link{
+		.navbar{
+			background-image: url(./images/bg1.jpg);
+			margin-bottom: 40px;
+		}
+
+		.nav-link{
 			padding: 8px 10px 8px !important;
 		}
 
@@ -49,115 +56,51 @@
 			
 		}
 
-		.jumbotron{
-			background-image: url('./images/restuarant.jpg');
-			height: 400px;
-			background-position: center;
-			opacity: 85%;
-			filter: blur(5px);
-
+		.nav-item .fa{
+			font-size: 35px;
+			margin-top: 2px;
+			color: #ff5c33;
 		}
 
-		.detail{
-			margin-top: 50px;
-			margin-bottom: 20px;
+		
+		.dropdown-menu a:active{
+			background-color: #404040;
 		}
 
-		.im{
-			height: 450px;
-			margin-bottom: 10px;
-		}
-
-
-		.leads{
-			margin-top: 10px;
-			text-align: center;
-			font-size: 30px; 
-			font-weight: 700;
-			background: rgb(0, 0, 0);
-  			background: rgba(0, 0, 0, 0.15); 
-			color: #ff3300;
-			font-family: 'Merriweather', serif;
-		}
-
-
-		.foodv video{
-			width: 90%;
-			margin: auto;
-			display: block;
-			margin-right: 0px;
-			margin-bottom: 30px;
-		}
-
-		h3{
-			font-family: 'Merriweather', serif;
-			margin-top: 30px;
-			text-align: center;
-			margin-bottom: 40px;
-			padding: 10px;
-			font-weight: bolder;
-
-		}
-
-		.cheff{
-			font-family: 'Merriweather', serif;
-			background: rgb(0, 0, 0);
-  			background: rgba(0, 0, 0, 0.15); 
-			color: #ff3300;
-			margin-top: 30px;
-			}
-
-		.chef{
-			margin-bottom: 50px;
-
-		}
-
-		.chef p{
-			font-family: 'Merriweather', serif;
-			margin-top: 10px;
-			font-style: italic;
-			text-align: center;
-			font-size: 18px;
-		}
-
-		.test{
-			font-family: 'Merriweather', serif;
-			background: rgb(0, 0, 0);
-  			background: rgba(0, 0, 0, 0.15); 
-			color: #ff3300;
-			font-weight: bolder;
-		}
-
-		.col{
-			margin: auto;
-			display: block;
-		}
-
-		.card{
-			background-color: #d9d9d9;
+		.form1{
 			margin-top: 20px;
-			border: 0px;
+			background-color: white;
+			width: 45%;
+			margin: auto;
+			display: block;
+			padding: 20px;
 			margin-bottom: 40px;
 		}
 
-		.card img{
-			width: 70%;
-			border-radius: 50%;
-			margin: auto;
-			margin-top: 20px;
+		.header{
+			text-align: center;
+			font-family: 'Merriweather', serif;
+			letter-spacing: 1px;
 		}
-
-		.card p{
-			font-style: italic;
+		
+		td{
 			padding: 10px;
 		}
 
-
-		.name{
-			color: #ff471a;
-			font-weight: bold;
-			text-align: right;
+		.btn1{
+			background-color:#ff5c33;
+			color: white;
+			width: 30%;
+			margin: auto;
+			display: block;
+			margin-top: 10px;
+			margin-bottom: 20px
 		}
+
+		.btn1:hover{
+			background-color: #404040;
+		}
+
 
 		.fa{
 			font-size: 30px;
@@ -206,40 +149,56 @@
 	        </div>
 	      </li>
 
+	      <li class="nav-item px-2">
+	      	<a href="cart.php"><span style=" color:green; font-size:30px;"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></a>
+	      </li>
+
 
 	    </ul>
 	  	</div>
 	  	</div>
 	</nav>
 
-	<h1>USER PROFILE</h1>
+	<div class="form1">
+
+	<div class="header">
+	<h2>USER PROFILE</h2>
+	</div>
 	<div class="profile-input-field">
-		<h3>Fill out All the details</h3>
-		<form method="post" , action="#">
+		<form method="post">
+			<table>
+			<tr>
 			<div class="form-group">
-				<label>Fullname</label>
-				<input type="text" name="fname" style="width: 20em" placeholder="Enter your Fullname" value="<?php echo $row['user_name']; ?>" required />
+			<td><label>Full Name</label></td>
+			<td><input type="text" name="fname" style="width: 20em" placeholder="Enter your Fullname" value="<?php echo $row['user_name']; ?>" required /></td>
 			</div>
+			</tr>
 
+			<tr>
 			<div class="form-group">
-				<label>Address</label>
-				<input type="text" name="address" style="width: 20em" placeholder="Enter your Address" value="<?php echo $row['user_address']; ?>" required />
+			<td><label>Address</label></td>
+			<td><input type="text" name="address" style="width: 20em" placeholder="Enter your Address" value="<?php echo $row['user_address']; ?>" required /></td>
 			</div>
+			</tr>
 
+			<tr>
 			<div class="form-group">
-				<label>Email</label>
-				<input type="text" name="email" style="width: 20em" placeholder="Enter your Email" value="<?php echo $row['user_emailid']; ?>" required />
+			<td><label>Email</label></td>
+			<td><input type="text" name="email" style="width: 20em" placeholder="Enter your Email" value="<?php echo $row['user_emailid']; ?>" required /></td>
 			</div>
+			</tr>
 
+			<tr>
 			<div class="form-group">
-				<label>Mobile Number</label>
-				<input type="text" name="number" style="width: 20em" placeholder="Enter your Address" value="<?php echo $row['user_mobilenumber']; ?>" required />
+			<td><label>Mobile Number</label></td>
+			<td><input type="text" name="number" style="width: 20em" placeholder="Enter your Address" value="<?php echo $row['user_mobilenumber']; ?>" required /></td>
 			</div>
+			</tr>
+			</table>
+			<input type="submit" name="submit" class="btn btn1">
+			</form>
+	</div>
 
-			<div class="form-group">
-				<input type="submit" name="submit" class="btn btn-primary" style="width: 20em; margin: 0;">
-			</div>
-		</form>
 	</div>
 
 	<footer class="page-footer font-small stylish-color-dark pt-4 foot">
@@ -255,9 +214,7 @@
 
 	        <!-- Content -->
 	        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Bay View Cafe</h5>
-	        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-	          consectetur
-	          adipisicing elit.</p>
+	        <p>Hotel Harbour View rooftop, PJ Ramchandani Marg, Apollo Bandar, Colaba, Mumbai, Maharashtra 400001</p>
 
 	      </div>
 	      <!-- Grid column -->
@@ -309,16 +266,6 @@
 		        <i class="fa fa-youtube-play"> </i>
 		      </a>
 		    </li>
-		<!--     <li class="list-inline-item">
-		      <a class="btn-floating btn-li mx-1">
-		        <i class="fab fa-linkedin-in"> </i>
-		      </a>
-		    </li>
-		    <li class="list-inline-item">
-		      <a class="btn-floating btn-dribbble mx-1">
-		        <i class="fab fa-dribbble"> </i>
-		      </a>
-		    </li> -->
 	 		</ul>
 
 	      </div>
@@ -333,19 +280,6 @@
 
 	  </div>
 	  <!-- Footer -->
-
-	  <!-- <hr> -->
-
-	  <!-- Call to action -->
-	<!--   <ul class="list-unstyled list-inline text-center py-2">
-	    <li class="list-inline-item">
-	      <h5 class="mb-1">Register for free</h5>
-	    </li>
-	    <li class="list-inline-item">
-	      <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
-	    </li>
-	  </ul> -->
-	  <!-- Call to action -->
 
 	  <hr>
 
@@ -379,7 +313,7 @@
 		?>
 		<script type="text/javascript">
 			alert("Update Successfull");
-			window.location = 'index.php'
+			window.location = 'index.php';
 		</script>
 
 		<?php

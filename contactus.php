@@ -9,10 +9,9 @@
 		$number = $_POST['contact_mobilenumber'];
 		$feedback = $_POST['feedback'];
 
-		$query = "INSERT INTO contact (contact_uid,contact_fname,contact_email,contact_mobilenumber,contact_query) VALUES ('$id','$fullname','$email','$number','$feedback')";
+		$query = "INSERT INTO contact(contact_uid,contact_fname,contact_email,contact_mobilenumber,contact_query) VALUES ('$id','$fullname','$email','$number','$feedback')";
 		$result = mysqli_query($db,$query);
 		if ($result) {
-			# code...
 			?>
 			<script type="text/javascript">
 				alert("Your query has been sent. You will be contacted shortly");
@@ -79,6 +78,17 @@
 			color: 	white;
 			border-radius: 5px;
 			
+		}
+
+
+		.dropdown-menu a:active{
+			background-color: #404040;
+		}
+
+		.nav-item .fa{
+			font-size: 35px;
+			margin-top: 2px;
+			color: #ff5c33;
 		}
 
 		.header{
@@ -176,7 +186,7 @@
 	        </div>
 	      </li>
 	      <li class="nav-item px-2">
-	      	<a href="cart.php"><span style=" color:green; font-size:30px;"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></a>
+	      	<a href="cart.php"><span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></a>
 	      </li>
 
 
@@ -223,9 +233,7 @@
 
 	        <!-- Content -->
 	        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Bay View Cafe</h5>
-	        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-	          consectetur
-	          adipisicing elit.</p>
+	        <p>Hotel Harbour View rooftop, PJ Ramchandani Marg, Apollo Bandar, Colaba, Mumbai, Maharashtra 400001</p>
 
 	      </div>
 	      <!-- Grid column -->

@@ -18,7 +18,7 @@
 
 		body{
 			overflow-x: hidden;
-			background-image: url(./images/bg11.jpg);
+			background-image: url(./images/food11.jpg);
 		}
 
 		.logo img{
@@ -49,167 +49,54 @@
 			
 		}
 
-
-		.jumbotron{
-			background-image: url("./images/food61.jpg");
-			background-position: left;
-			height: 550px;
-			margin-bottom: 50px;
+		.dropdown-menu a:active{
+			background-color: #404040;
 		}
 
-		.jumbtext{
-			color: white;
-			width: 30%;
-			position: relative;
-			top: 30%;
-			left: 30%;
-		}
-
-		.sel p{
-			text-align: center;
-			color: #ff5c33;
-			font-family: 'Merriweather', serif;
-			/*letter-spacing: 1px;*/
-
-		}
-
-		.seller{
-			margin-top: 0px;
-			/*background-image: linear-gradient(to right top, #ff5c33 0%, #ffbf80 100%);*/
-			/*background-color:#595959;*/
-			background: rgb(0, 0, 0);
-  			background: rgba(0, 0, 0, 0.20); 
-			color: #ff3300;
-			margin-bottom: 30px;
-
-
-		}
-
-
-		.seller h3{
-			font-size: 32px;
-			padding: 15px;
-			text-align: center;
-			margin: 15px;
-			margin-top: 0px;
-			font-family: 'Merriweather', serif;
-			letter-spacing: 1px;
-			font-weight: 900;
-
-		}
-
-
-		.col{
-			width: 85%;
-			height: 380px;
-			margin: auto;
-			display: block;
-			margin-bottom: 10px;
-			padding: 0px;
-		}
-
-		.chooseus{
-			background-image: linear-gradient(to right top, #ff5c33 0%, #ffbf80 100%);
-		}
-
-		.chooseus h3{
-			padding: 15px;
-			text-align: center;
-			margin: 20px;
-			margin-top: 30px;
-			font-family: "Times New Roman", Times, serif;
-
-		}
-
-		.cen{
-			width: 75%;
-			margin: auto;
-			display: block;
-		}
-
-		.serve{
-			width: 85%;
-			margin: auto;
-			display: block;
-			margin-right: 0px;
+		.nav-item .fa{
+			font-size: 35px;
+			margin-top: 2px;
 		}
 
 		
-		.cheff{
+		.dropdown-menu a:active{
 			background-color: #404040;
-			margin: auto;
-			margin-top: 30px;
 		}
 
-
-
-		.serve h3{
-			font-size: 32px;
-			color: white;
-		}
-
-		.serve p{
-			margin-top: 25px;
-			font-size: 17px;
-			font-style: italic;
-			color: lightgrey;
-		}
-
-		.serve p,h3{
-			text-align: center;
-		}
-
-		.serve button{
-			margin-top: 30px;
-			border: none;
-			background-color: #ff5c33;
-			padding: 10px;
-			color: white;
-			font-size: 18px;
-		}
-
-
-		.col1{
-			width: 75%;
-			margin: auto;
-			margin-top: 20px;
-			margin-bottom: 20px;
-			display: block;
-		}
-
-/*		.chooseus h3{
-			margin-top: 0px;
-		}*/
-
-
-		.choose p{
-			text-align: center;
-		}
-
-		.choose{
-			margin-bottom: 50px;
-		}
-
-
-
-		.adv1{
-			width: 80%;
-			padding: 10%;
-			margin: auto;
-			display: block;
-			box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-			margin-top: 40px;
-			margin-bottom: 40px;
-		}
-
-		.adv h5{
+		.nav-item .fa{
+			font-size: 35px;
+			margin-top: 2px;
 			color: #ff5c33;
-			text-align: center;
-			font-family: 'Merriweather', serif;
 		}
 
-		.adv img{
-			padding: 30px;
+		.entire{
+			background-color: white;
+			width: 40%;
+			margin: auto;
+			padding: 10px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		.header{
+			margin-top: 20px;
+			font-family: 'Merriweather', serif;
+			letter-spacing: 1px;
+			text-align: center;
+			font-weight: 700;
+		}
+
+		table{
+			margin-bottom: 20px;
+		}
+
+		th{
+			background-color: #ff5c33;
+			color: white;
+			font-weight: 500;
+			padding: 8px;
+		}
+		td{
+			padding: 8px;
 		}
 		.fa{
 			font-size: 30px;
@@ -266,7 +153,7 @@
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	          <a class="dropdown-item" href="profile.php">Profile</a>
-	          <a class="dropdown-item" href="#">My Orders</a>
+	          <a class="dropdown-item" href="orders.php">My Orders</a>
 	          <a class="dropdown-item" href="logout.php">LogOut</a>
 	        </div>
 	      </li>
@@ -279,6 +166,12 @@
 	  	</div>
 	</nav>
 
+<div class="entire">
+<div class="header container-fluid">
+	<h4>Your Previous Orders</h4>
+</div>
+
+<div class="container-fluid">
 <table border="3">
 	<tr>
 		<th>Order Number</th>
@@ -310,10 +203,10 @@
 	?>
 </table>
 
+</div>
 
 
-
-
+</div>
 
 
 
@@ -331,9 +224,7 @@
 
         <!-- Content -->
         <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Bay View Cafe</h5>
-        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-          consectetur
-          adipisicing elit.</p>
+        <p>Hotel Harbour View rooftop, PJ Ramchandani Marg, Apollo Bandar, Colaba, Mumbai, Maharashtra 400001</p>
 
       </div>
       <!-- Grid column -->
@@ -385,16 +276,7 @@
 	        <i class="fa fa-youtube-play"> </i>
 	      </a>
 	    </li>
-	<!--     <li class="list-inline-item">
-	      <a class="btn-floating btn-li mx-1">
-	        <i class="fab fa-linkedin-in"> </i>
-	      </a>
-	    </li>
-	    <li class="list-inline-item">
-	      <a class="btn-floating btn-dribbble mx-1">
-	        <i class="fab fa-dribbble"> </i>
-	      </a>
-	    </li> -->
+
  		</ul>
 
       </div>
@@ -407,20 +289,6 @@
     <!-- Grid row -->
 
   </div>
-  <!-- Footer -->
-
-  <!-- <hr> -->
-
-  <!-- Call to action -->
-<!--   <ul class="list-unstyled list-inline text-center py-2">
-    <li class="list-inline-item">
-      <h5 class="mb-1">Register for free</h5>
-    </li>
-    <li class="list-inline-item">
-      <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
-    </li>
-  </ul> -->
-  <!-- Call to action -->
 
   <hr>
 
@@ -432,3 +300,10 @@
 
 </footer>
 <!-- Footer -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

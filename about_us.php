@@ -39,6 +39,17 @@
 			
 		}
 
+
+	    .dropdown-menu a:active{
+	      background-color: #404040;
+	    }
+
+	    .nav-item .fa{
+	      font-size: 35px;
+	      margin-top: 2px;
+	      color: #ff5c33;
+	    }
+
 		.jumbotron{
 			background-image: url('./images/restuarant.jpg');
 			height: 400px;
@@ -51,6 +62,15 @@
 		.detail{
 			margin-top: 50px;
 			margin-bottom: 20px;
+		}
+
+		.detail h6{
+			font-size: 14px;
+		}
+
+		.detail p{
+			font-style: italic;
+			text-align: center;
 		}
 
 		.im{
@@ -215,17 +235,13 @@
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner im">
     <div class="carousel-item active">
       <img class="d-block w-100" src="./images/restuarant.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="./images/restuarant.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="./images/restuarant.jpg" alt="Third slide">
+      <img class="d-block w-100" src="./images/view11.jpg" alt="Second slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -260,7 +276,7 @@
 
 	<div class="col-lg-8">
 		<div class="foodv">
-			<video muted controls>
+			<video muted controls autoplay>
 				<source src="./images/foodvideo1.mp4" type="video/mp4">
  				Your browser does not support the video tag.
 			</video>
@@ -306,7 +322,7 @@
 	<div class="card" style="">
   <img class="card-img-top" src="./images/cust41.jpg" alt="Card image cap">
   <div class="card-body">
-    <p class="card-text">"The restaurent service and presentation was amazing the staff was efficient and so well mannered and kind.The service was quick and way professional the views are <i>Gorgeous!!!</i>Menu Very Yumy and straight forward to choose!!"</p>
+    <p class="card-text">"The restaurent service and presentation was amazing the staff was efficient and so well mannered and kind.The service was quick and way professional the view is gorgeous!</p>
     <p class="name"> -Kirti Kulhari</p>
   </div>
 </div>
@@ -316,7 +332,7 @@
 <div class="card" style="">
   <img class="card-img-top" src="./images/cust2.jpg" alt="Card image cap">
   <div class="card-body">
-    <p class="card-text">"I loved this hidden little gem , the food is delicious it has chilled vibe and the restaurent itself is absolutely beautiful.I would always prefer this restaurent over others."</p>
+    <p class="card-text">"I loved this hidden little gem , the food is delicious it has chilled vibe and the restaurent itself is absolutely beautiful. I would always prefer this restaurent over others."</p>
     <p class="name"> -Rohit Khandelwal</p>
   </div>
 </div>
@@ -326,7 +342,7 @@
 <div class="card" style="">
   <img class="card-img-top" src="./images/cust3.jpg" alt="Card image cap">
   <div class="card-body">
-    <p class="card-text">"Been coming here for about 10 years now. I Refuse to go to any other restaurent. Owners are always Friendly and very welcoming to everyone."</p>
+    <p class="card-text">"Been coming here for more than 10 years now and still love this place. I refuse to go to any other restaurent. Owners are always friendly and very welcoming to everyone."</p>
     <p class="name"> -Dolly Singh</p>
   </div>
 </div>
@@ -350,9 +366,7 @@
 
         <!-- Content -->
         <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Bay View Cafe</h5>
-        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-          consectetur
-          adipisicing elit.</p>
+        <p>Hotel Harbour View rooftop, PJ Ramchandani Marg, Apollo Bandar, Colaba, Mumbai, Maharashtra 400001</p>
 
       </div>
       <!-- Grid column -->
@@ -404,15 +418,7 @@
 	        <i class="fa fa-youtube-play"> </i>
 	      </a>
 	    </li>
-	<!--     <li class="list-inline-item">
-	      <a class="btn-floating btn-li mx-1">
-	        <i class="fab fa-linkedin-in"> </i>
-	      </a>
-	    </li>
-	    <li class="list-inline-item">
-	      <a class="btn-floating btn-dribbble mx-1">
-	        <i class="fab fa-dribbble"> </i>
-	      </a>
+
 	    </li> -->
  		</ul>
 
@@ -429,18 +435,6 @@
   </div>
   <!-- Footer -->
 
-  <!-- <hr> -->
-
-  <!-- Call to action -->
-<!--   <ul class="list-unstyled list-inline text-center py-2">
-    <li class="list-inline-item">
-      <h5 class="mb-1">Register for free</h5>
-    </li>
-    <li class="list-inline-item">
-      <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
-    </li>
-  </ul> -->
-  <!-- Call to action -->
 
   <hr>
 

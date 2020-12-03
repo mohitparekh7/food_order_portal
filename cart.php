@@ -19,9 +19,6 @@
 		if (mysqli_query($db,$query)) {
 			# code...
 			?>
-			<script type="text/javascript">
-				alert("incremented!");
-			</script>
 			<?php
 		}
 		else{
@@ -48,9 +45,6 @@
 		if (mysqli_query($db,$query)) {
 			# code...
 			?>
-			<script type="text/javascript">
-				alert("decremented!");
-			</script>
 			<?php
 		}
 		else{
@@ -85,7 +79,7 @@
 					if (mysqli_query($db,$query2)) {
 						?>
 							<script type="text/javascript">
-								alert("rowstate changed");
+								document.location = 'index.php';
 							</script>
 						<?php
 					}
@@ -147,12 +141,63 @@
 			border-radius: 5px;
 			
 		}
+
+
+	    .dropdown-menu a:active{
+	      background-color: #404040;
+	    }
+
+	    .nav-item .fa{
+	      font-size: 35px;
+	      margin-top: 2px;
+	      color: #ff5c33;
+	    }
+
+		.card {
+			margin-bottom: 20px;
+	      text-align: center;
+	    }
+	    
+	    .card img{
+	      height: 270px;
+	    }
+
+	    .btn1{
+			background-color:#ff5c33;
+			color: white;
+			width: 15%;
+			border-color: #ff5c33;
+			margin-left: 10px;
+		}
+
+		.pr{
+			background-color: #ff5c33;
+			text-align: right;
+			padding: 8px;
+			color: white;
+			font-weight: 700;
+			font-size: 20px;
+		}
+
+		.pr p{
+			margin-bottom: 0px;
+		}
+
+		.btn2{
+			background-color:#ff5c33;
+			color: white;
+			float: right;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 18px;
+		}
 		.fa{
 			font-size: 30px;
 			margin-right: 10px;
 		}
 
 		.foot{
+			clear: both;
 			background-color: lightgrey;
 		}
 	</style>
@@ -193,7 +238,7 @@
           </div>
         </li>
 	      <li class="nav-item px-2">
-          <a href="cart.php"><span style=" color:green; font-size:30px;"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></a>
+          <a href="cart.php"><span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></a>
         </li>
 
 	    </ul>
@@ -203,22 +248,19 @@
 
 
 
-<div id="special">
 <div style="text-align: center; margin-bottom: 20px; font-size: 25px;background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.20);">
   <h3 style="color: #ff3030; padding: 10px; font-family: 'Merriweather', serif;">My Cart</h3>
 </div>
-<div class="container" style="width:95%; margin: auto;">
-<div class="row sp">
-
+     <div class="container">
+      <div class="row">
 
     <?php
-        $product= mysqli_query($db,"SELECT * FROM cart WHERE u_id='$id' "); 
+        $product= mysqli_query($db,"SELECT * FROM cart WHERE u_id='$id' and qty>=1"); 
         $total_price = 0;
         if (!empty($product)) { 
         while ($row=mysqli_fetch_array($product)) {
         	$product_price = $row['qty'] * $row['price'];
         	$total_price = $total_price + $product_price;
-        	// echo $total_price;
         ?>
         <form method="post">
 	        <div class="col-lg-4">
@@ -229,23 +271,26 @@
 			          </h5>
 			          <div class="shop-item-details">
 				          <p class="shop-item-price">Quantity: <?php echo $row['qty'] ?>
-				          	<button type="submit" name="plus" value="<?php echo $row['pid'] ?>">+</button>
-				          	<button type="submit" name="minus" value="<?php echo $row['pid'] ?>">-</button>
+				       		<button type="submit" name="minus" class="btn1" value="<?php echo $row['pid'] ?>">-</button>
+				          	<button type="submit" name="plus" class="btn1" value="<?php echo $row['pid'] ?>">+</button>
 				          </p>
-
 				          <p class="shop-item-price">Price: <?php echo "Rs ".$product_price ?></p>
-
 			          </div>
 			        </div>
-		      </div>
+		      	</div>
 	      	</div>
-     	</form>
+	      </form>
        <?php
       }
       ?>
+  </div>
+</div>
+<div class="container">
       	<form method="post">
-      		Total Price: <?php echo $total_price?>
-      		<button type="submit" class="btn btn1" name="checkout">Checkout</button>
+      		<div class="pr">
+      		<p>Total Price: <?php echo $total_price?></p>
+      		</div>
+      		<button type="submit" class="btn btn2" name="checkout">Checkout</button>
       	</form>
       <?php
   }  else {
@@ -255,8 +300,7 @@
   ?>
   
 </div>
-</div>
-</div>
+
 
 
 <footer class="page-footer font-small stylish-color-dark pt-4 foot">
@@ -272,9 +316,7 @@
 
         <!-- Content -->
         <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Bay View Cafe</h5>
-        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-          consectetur
-          adipisicing elit.</p>
+        <p> Hotel Harbour View rooftop, PJ Ramchandani Marg, Apollo Bandar, Colaba, Mumbai, Maharashtra 400001</p>
 
       </div>
       <!-- Grid column -->
@@ -326,15 +368,7 @@
 	        <i class="fa fa-youtube-play"> </i>
 	      </a>
 	    </li>
-	<!--     <li class="list-inline-item">
-	      <a class="btn-floating btn-li mx-1">
-	        <i class="fab fa-linkedin-in"> </i>
-	      </a>
-	    </li>
-	    <li class="list-inline-item">
-	      <a class="btn-floating btn-dribbble mx-1">
-	        <i class="fab fa-dribbble"> </i>
-	      </a>
+
 	    </li> -->
  		</ul>
 

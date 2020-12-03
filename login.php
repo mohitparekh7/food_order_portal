@@ -44,6 +44,7 @@
 		body{
 			background-image: url(./images/food.jpeg);
 			background-position: center;
+			overflow-x: hidden;
 		}
 
 		.header{
@@ -65,6 +66,7 @@
 		.bar{
 			background-image: url(./images/bg11.jpg);
 			margin-bottom: 40px;
+			margin-top: 0px;
 		}
 
 		.bar img{
@@ -104,8 +106,29 @@
 			background-color: lightgrey;
 		}
 	</style>
+
+	<script type="text/javascript">
+		function valform()
+		{
+			var pass = document.form1.login_password.value;
+			var email = document.form1.login_email.value;
+
+			if (email==null || email==""){
+				alert("Email can't be blank");
+				return false;
+			}
+
+			if (pass==null || pass==""){
+				alert("Password can't be blank");
+				return false;
+			}
+
+
+		}
+
+	</script>
 </head>
-<body>
+	<body>
 	<div class="container-fluid bar">
 		<img src="./images/logo21.png">
 	</div>
@@ -118,15 +141,15 @@
 
 
 	<table>
-		<form method="post">
+		<form method="post" name='form' onsubmit="return valform()">
 			<tr>
 				<td><label>Email Id</label></td>
-				<td><input type="varchar" required="required"name="login_email" value=""></td>
+				<td><input type="email" required name="login_email"></td>
 			</tr>
 			
 			<tr>
 				<td><label>Password</label></td>
-				<td><input type="password" required="required" name="login_password" ></td>
+				<td><input type="password" required name="login_password"></td>
 			</tr>
 			</table>
 			<div><button type="submit" class="btn btn1" name="submit_login">Login</button></div>
@@ -148,9 +171,7 @@
 
 	        <!-- Content -->
 	        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Bay View Cafe</h5>
-	        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-	          consectetur
-	          adipisicing elit.</p>
+	        <p>Hotel Harbour View rooftop, PJ Ramchandani Marg, Apollo Bandar, Colaba, Mumbai, Maharashtra 400001</p>
 
 	      </div>
 	      <!-- Grid column -->
